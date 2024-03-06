@@ -1,17 +1,20 @@
 Python 3.10.5 (tags/v3.10.5:f377153, Jun  6 2022, 16:14:13) [MSC v.1929 64 bit (AMD64)] on win32
 Type "help", "copyright", "credits" or "license()" for more information.
-import tkinter as tk
+from tkinter import *
 
-def change_color(color):
-    root.configure(bg=color)
+count = 0
 
-root = tk.Tk()
-root.title("Color Changer")
+def button_clicked():
+    global count
+    count = count + 100
+    count_text.config(text=count)
 
-red_button = tk.Button(root, text="Red", command=lambda: change_color("red"))
-red_button.pack(side="left", padx=10)
+window = Tk()
 
-blue_button = tk.Button(root, text="Blue", command=lambda: change_color("blue"))
-blue_button.pack(side="right", padx=10)
+count_text = Label(text="0")
+count_text.pack()
 
-root.mainloop()
+button = Button(text="click", command=button_clicked)
+button.pack()
+
+window.mainloop()

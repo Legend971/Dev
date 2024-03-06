@@ -2,7 +2,7 @@ from tkinter import*
 
 class Student():
 
-    def __innit__(self, name):
+    def __init__(self, name):
         self.first_name = name
     
     def display_name(self):
@@ -21,7 +21,7 @@ class Student():
         return self.grade
 
 def show_grade():
-    grade_label.config(text=csc_level_2[0].get_grade)
+    grade_label.config(text=csc_level_2[0].get_grade())
     pass
 
 csc_level_2 = []
@@ -32,7 +32,7 @@ csc_level_2[0].display_name()
 
 csc_level_2.append(Student("Shauryya"))
 csc_level_2[1].set_grade("Excellence")
-csc_level_2[1].display_name()
+csc_level_2[0].display_name()
 
 window = Tk()
 window.geometry("300x300")

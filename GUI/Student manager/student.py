@@ -13,3 +13,7 @@ class Student:
         print(self.grade)
 
 csc_level_2 = []
+
+csc_level_2.append(Student())
+
+csc_level_2[0].display_name()

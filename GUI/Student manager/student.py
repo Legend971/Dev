@@ -8,8 +8,8 @@ class Student():
     def display_name(self):
         print(self.first_name)
 
-    def set_grade(self, grade):
-        self.grade = grade
+    def set_name(self, name):
+        self.name = name
 
     def display_grade(self):
         print(self.grade)
@@ -19,9 +19,16 @@ class Student():
 
     def get_grade(self):
         return self.grade
+    
+    def get_name(self):
+        return self.name
 
 def show_grade():
     grade_label.config(text=csc_level_2[0].get_grade())
+    pass
+
+def show_name():
+    name_label.config(text=csc_level_2[0].get_name())
     pass
 
 csc_level_2 = []
@@ -42,5 +49,11 @@ grade_label.pack()
 
 show_grade_btn = Button(text="Show Grade", command=show_grade)
 show_grade_btn.pack()
+
+name_label = Label()
+name_label.pack()
+
+show_name_btn = Button(text="Show Name", command=show_name)
+show_name_btn.pack()
 
 window.mainloop()

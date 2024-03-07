@@ -3,10 +3,10 @@ from tkinter import*
 class Student():
 
     def __init__(self, name):
-        self.first_name = name
+        self.name = name
     
     def display_name(self):
-        print(self.first_name)
+        print(self.name)
 
     def set_name(self, name):
         self.name = name
@@ -39,10 +39,21 @@ csc_level_2[0].display_name()
 
 csc_level_2.append(Student("Shauryya"))
 csc_level_2[1].set_grade("Excellence")
-csc_level_2[0].display_name()
+csc_level_2[1].display_name()
+
+csc_level_2.append(Student("Gabby"))
+csc_level_2[2].set_grade("Merit")
+csc_level_2[2].display_name()
 
 window = Tk()
 window.geometry("300x300")
+
+students_listbox = Listbox(window)
+students_listbox.pack()
+
+students_listbox.insert(0, "Kajah")
+students_listbox.insert(0, "Shauryya")
+students_listbox.insert(0, "Gabby")
 
 grade_label = Label()
 grade_label.pack()
